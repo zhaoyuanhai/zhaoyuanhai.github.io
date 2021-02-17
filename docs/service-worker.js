@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.8267dd14ba7485ed472f2c7552ff76fe.js"
+  "/precache-manifest.44e0b9a8d6555e2d489cc8a1e33e3c6b.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "zhaoyuanhai.io"});
