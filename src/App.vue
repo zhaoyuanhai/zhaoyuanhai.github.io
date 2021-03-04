@@ -1,12 +1,12 @@
 <template>
   <div class="app">
-    <f-header :class="{ navBarWrap: navBarFixed }"></f-header>
+    <!-- <f-header :class="{ navBarWrap: navBarFixed }"></f-header> -->
     <el-row type="flex" justify="center" id="content">
       <el-col :xs="20" :md="20" :style="{ minHeight: minHeight + 'px' }">
         <router-view></router-view>
       </el-col>
     </el-row>
-    <f-footer></f-footer>
+    <!-- <f-footer></f-footer> -->
   </div>
 </template>
 

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     header: {
         home: '首页',
         archive: '归档',
