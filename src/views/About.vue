@@ -1,46 +1,31 @@
 <template>
-  <div class="about">
-    <textarea class="rage" v-model="jsonText"></textarea>
-    <textarea class="rage" v-model="kvText"></textarea>
-    <button @click="toFormdata">Json转FormData</button>
-    <button @click="toJson">FormData转Json</button>
-  </div>
+  <textarea v-model="jsonText"></textarea>
+  <textarea v-model="keyValueText"></textarea>
+  <button @click="jsonToKeyValue()">Json To KeyValue</button>
+  <button @click="keyValueToJson()">KeyValue To Json</button>
+  <div>about</div>
 </template>
 
 <script lang="ts">
-import func from "vue-editor-bridge";
-export default {
-  data() {
-    return {
-      jsonText: "aaa",
-      kvText: "bbb",
-    };
-  },
-  methods: {
-    toJson() {
-      this.jsonText = this.kvText;
-    },
-    toFormdata() {
-      function analysis(jobj: Object) {
-        var arrList = [];
-        var kvList = Object.entries(jobj);
+import { Options, Vue } from "vue-class-component";
 
-        kvList.forEach((element) => {
-          // element.val
-        });
-      }
+@Options({
+  components: {},
+})
+export default class About extends Vue {
+  keyValueText: String = "sss";
+  jsonText: String = "sss";
 
-      var jsonObject = JSON.parse(this.jsonText);
+  mounted() {}
 
-      this.kvText = this.jsonText;
-    },
-  },
-};
+  jsonToKeyValue() {
+    this.keyValueText = this.jsonText;
+  }
+  keyValueToJson() {
+    this.jsonText = this.keyValueText;
+  }
+}
 </script>
 
-<style lang="less">
-.rage {
-  width: 50%;
-  height: 300px;
-}
+<style>
 </style>
